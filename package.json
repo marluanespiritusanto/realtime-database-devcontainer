@@ -2,7 +2,7 @@
   "name": "realtime_database",
   "version": "1.0.0",
   "description": "Realtime Database inside a Docker Container",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node --inspect -r esm src/server.js"
   },
