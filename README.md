@@ -13,4 +13,4 @@ Simple application to learn how to implement realtime processing, like Firebase.
 ## Aditional information
 
 - Follow me on [twitter](https://twitter.com/marluanguerrero)
-- Watch the video on [YouTube](https://youtube.com)
+- Watch the video on [YouTube](https://youtu.be/5owqG-Z9ROw)
