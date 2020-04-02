@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: node-environment
+    image: node
+    environment:
+      - DB_HOST=rethinkdb
+      - PORT=7000
+      - DB_NAME=chats
+      - DB_TABLE_NAME=messages
+    depends_on:
+      - rethinkdb
+    volumes:
+      - .:/app/
+    ports: ["7000:7000"]
+    tty: true
+
+  rethinkdb:
+    container_name: rethink-database
+    image: rethinkdb
+    volumes:
+      - "./db:/data"
+    # Rethink dashboard
+    ports: ["8080:8080"]

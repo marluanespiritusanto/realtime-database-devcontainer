@@ -1,0 +1,28 @@
+{
+  "name": "Realtime Database",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "npm install --only=production",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.fontSize": 18,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Andromeda",
+    "workbench.iconTheme": "material-icon-theme"
+  },
+  "extensions": [
+    "aaron-bond.better-comments",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "CoenraadS.bracket-pair-colorizer",
+    "eamodio.gitlens",
+    "eg2.vscode-npm-script",
+    "EliverLara.andromeda",
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "redhat.vscode-yaml",
+    "xabikos.JavaScriptSnippets"
+  ]
+}
