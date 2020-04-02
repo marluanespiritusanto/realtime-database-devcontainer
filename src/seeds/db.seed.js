@@ -8,10 +8,10 @@ export default async connection => {
       .run(connection);
 
     if (!db) {
-      rethinkdb.dbCreate(process.env.DB_NAME).run(connection);
+      await rethinkdb.dbCreate(process.env.DB_NAME).run(connection);
       db = rethinkdb.db(process.env.DB_NAME);
       console.log("Chats database created");
-      db.tableCreate(process.env.DB_TABLE_NAME).run(connection);
+      await db.tableCreate(process.env.DB_TABLE_NAME).run(connection);
       console.log("messages table created successfully");
     }
   } catch (ex) {
