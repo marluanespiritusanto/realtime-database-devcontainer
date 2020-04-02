@@ -5,7 +5,7 @@ import createApplication from "./app";
 rethinkdb
   .connect({ host: process.env.DB_HOST })
   .then(async connection => {
-    await DbSeed(connection); // create default database and table
+    await DbSeed(connection);
     const app = await createApplication(connection);
 
     app.listen(process.env.PORT, () => {

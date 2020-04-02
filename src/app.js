@@ -24,9 +24,9 @@ export default async connection => {
   const getComments = () =>
     new Promise(async (resolve, reject) => {
       const comments = [];
-      const cursor = await commentsTable.run(connection);
+      const _cursor = await commentsTable.run(connection);
 
-      cursor.each(
+      _cursor.each(
         (err, message) => {
           if (err) {
             reject(err);
